@@ -5,6 +5,12 @@
 
 #new-dog-form {
     text-align: center;
+    padding: 1rem;
+}
+
+.input-text {
+    height: 1.5rem;
+    width: 25%;
 }
 
 #dog-collection {
@@ -23,6 +29,6 @@
 
 .dog-image {
     justify-self: center;
-    height: 12rem;
-    width: auto;
+    height: 10rem;
+    width: 15rem;
 }

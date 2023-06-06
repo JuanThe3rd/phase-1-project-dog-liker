@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>Dog Liker</title>
         <link rel="stylesheet" href="index.css" />
-        <script type="text/javascript" src="src/index.js" defer></script>
+        <script type="text/javascript" src="./index.js" defer></script>
     </head>
     <body>
         <div id="main-header">
@@ -12,37 +12,17 @@
         </div>
 
         <form id="new-dog-form">
-            <input placeholder="Enter a Dog's Name" name="name"/>
+            <input class="input-text" placeholder="Enter a Dog's Name" name="name"/>
             <br />
-            <input placeholder="Enter a Dog's Image URL" name="image"/>
+            <input class="input-text" placeholder="Enter a Dog's Image URL" name="image"/>
             <br />
-            <input placeholder="Enter Dog Breed" name="breed"/>
+            <input class="input-text" placeholder="Enter Dog Breed" name="breed"/>
             <br />
             <input type="submit" value="ADD YOUR DOG!"/>
         </form>
 
         <div id="dog-collection">
-            <div class="dog-card">
-                <h2 class="dog-card-content">Molly</h2>
-                <img class ="dog-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/800px-Square_-_black_simple.svg.png" alt="textIMG">
-                <p class="dog-card-content">Border Collie</p>
-                <p class="dog-card-content">5 Likes</p>
-                <button>Like ❤️</button>
-            </div>
-            <div class="dog-card">
-                <h2>Molly</h2>
-                <img class ="dog-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/800px-Square_-_black_simple.svg.png" alt="textIMG">
-                <p>Border Collie</p>
-                <p>5 Likes</p>
-                <button>Like ❤️</button>
-            </div>
-            <div class="dog-card">
-                <h2>Molly</h2>
-                <img class ="dog-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/800px-Square_-_black_simple.svg.png" alt="textIMG">
-                <p>Border Collie</p>
-                <p>5 Likes</p>
-                <button>Like ❤️</button>
-            </div>
+
         </div>
     </body>
 </html>
