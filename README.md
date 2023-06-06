@@ -1,4 +1,4 @@
-# phase-1-project-dog-liker
+# Dog Liker Website
 
 ## Project: 
 This website will allow the user to view, like, and add their own dog as well as filter dog profiles to find ones they're looking for. We'll be using a json server to pull information from and using buttons, filters, and submit form event listeners to create a dynamic page with interactivity.
