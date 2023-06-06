@@ -1,0 +1,28 @@
+#main-header {
+    display: flex;
+    justify-content: center;
+}
+
+#new-dog-form {
+    text-align: center;
+}
+
+#dog-collection {
+    margin: 3rem;
+}
+
+.dog-card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 5rem;
+}
+
+.dog-image {
+    justify-self: center;
+    height: 12rem;
+    width: auto;
+}
