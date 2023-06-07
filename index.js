@@ -1,7 +1,6 @@
 const dogAPI = 'http://localhost:3000/dogs';
-const dogCollection = document.getElementById('dog-collection')
+const dogCollection = document.getElementById('dog-collection');
 const addDogForm = document.getElementById('new-dog-form');
-const filterBtn = document.getElementById('filter-btn')
 
 const headers = {
     Accepts: 'application/json',
@@ -10,8 +9,7 @@ const headers = {
 
 let dogList = [];
 
-addDogForm.addEventListener('submit', addNewDog);
-filterBtn.addEventListener('click', () => {alert("It's Working!")});
+addDogForm.addEventListener('submit', addNewDog)
 
 //FETCH THE DOGSs
 fetch(dogAPI)
@@ -89,3 +87,11 @@ function incrementLikes(id) {
         renderDogs();
     });
 }
+
+// Filter Section
+const filterBtn = document.getElementById('filter-btn');
+const filterForm = document.getElementById('filter-container');
+
+filterBtn.addEventListener('click', () => {
+    filterForm.classList.remove('hidden')
+});

@@ -20,8 +20,20 @@
             <br />
             <input type="submit" value="ADD YOUR DOG!"/>
         </form>
-        <div id="filter-container">
+
+        <div id="filter-border">
             <img id="filter-btn" src="https://static.thenounproject.com/png/247545-200.png" alt="filter-image"/>
+        </div>
+        <div id="filter-container" class="hidden">
+            <div id="filter-header">
+                Filter Dogs!
+            </div>
+            <form id="filter-form">
+                <input placeholder="Enter Dog Breed to Filter" name="filterByBreed"/>
+                <input value="Submit" type="submit"/>
+                <br />
+                <input type="submit" value="Filter by Most Liked"/>
+            </form>
         </div>
 
         <div id="dog-collection"></div>
