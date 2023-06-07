@@ -19,29 +19,29 @@ fetch(dogAPI)
         renderDogs()
     });
 
-    function renderDogs() {
-        dogCollection.innerHTML = '';
-        dogList.forEach(renderDog);
-    }
+function renderDogs() {
+    dogCollection.innerHTML = '';
+    dogList.forEach(renderDog);
+}
 
-    function renderDog(dog){
-        const newDog = document.createElement('div');
-        newDog.classList.add('dog-card');
-        const likeButtonId = `like-button-${dog.id}`
-        newDog.innerHTML = `
+function renderDog(dog){
+    const newDog = document.createElement('div');
+    newDog.classList.add('dog-card');
+    const likeButtonId = `like-button-${dog.id}`
+    newDog.innerHTML = `
         <h2 class="dog-card-content">${dog.name}</h2>
         <img class ="dog-image" src="${dog.image}" alt="${dog.name}IMG">
         <p class="dog-card-content">${dog.breed}</p>
         <p class="dog-card-content">${dog.likes} Likes</p>
         <button id="${likeButtonId}">Like ❤️</button>
-        `;
-        dogCollection.append(newDog);
+    `;
+    dogCollection.append(newDog);
 
-        document.getElementById(likeButtonId).addEventListener('click', event => {
-            incrementLikes(dog.id);
-        })
-    
-    }
+    document.getElementById(likeButtonId).addEventListener('click', event => {
+        incrementLikes(dog.id);
+    })
+
+}
 
 function addNewDog(event) {
     event.preventDefault();
@@ -53,6 +53,10 @@ function addNewDog(event) {
         breed: form.breed.value,
         likes: 0
     };
+
+    form.name.value = '';
+    form.image.value = '';
+    form.breed.value = '';
 
     fetch (dogAPI, {
         headers,
@@ -66,20 +70,20 @@ function addNewDog(event) {
     });
 }
 
-    function incrementLikes(id) {
-        const dog = dogList.find(dog => dog.id === id);
-        //console.log(dog);
+function incrementLikes(id) {
+    const dog = dogList.find(dog => dog.id === id);
+    //console.log(dog);
 
-        fetch(`${dogAPI}/${id}`, {
-            headers,
-            method: 'PATCH',
-            body: JSON.stringify({
-                likes: dog.likes + 1
-            })
+    fetch(`${dogAPI}/${id}`, {
+        headers,
+        method: 'PATCH',
+        body: JSON.stringify({
+            likes: dog.likes + 1
         })
-        .then(res => res.json())
-        .then(json => {
-            dog.likes = json.likes;
-            renderDogs();
-        });
-    }
+    })
+    .then(res => res.json())
+    .then(json => {
+        dog.likes = json.likes;
+        renderDogs();
+    });
+}
