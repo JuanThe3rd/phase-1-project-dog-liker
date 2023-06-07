@@ -1,46 +1,46 @@
 {
-    "dogs": [
-        {
-            "id": 1,
-            "name": "Molly",
-            "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F03%2F02%2Fborder-collie-green-field-268313239-2000.jpeg",
-            "breed": "Border Collie",
-            "likes": 5
-        },
-        {
-            "id": 2,
-            "name": "Bella",
-            "image": "https://media-be.chewy.com/wp-content/uploads/2021/04/01194949/chihuahua-laying-on-floor-1024x615.jpg",
-            "breed": "Chihuahua",
-            "likes": 6
-        },
-        {
-            "id": 3,
-            "name": "Chloe",
-            "image": "https://a-z-animals.com/media/animals/images/original/english_springer_spaniel.jpg",
-            "breed": "English Springer Spaniel",
-            "likes": 8
-        },
-        {
-            "id": 4,
-            "name": "Charlie",
-            "image": "https://cdn.rescuegroups.org/1023/pictures/animals/19246/19246111/93925306.jpg",
-            "breed":"Schnauzer mix",
-            "likes": 7
-        },
-        {
-            "id": 5,
-            "name": "Chip",
-            "image": "https://cdn-ghckb.nitrocdn.com/ywsRCaHzPZOrRGmIQthcAKzblzYFHUKW/assets/images/optimized/rev-ea82780/wp-content/uploads/2021/05/cute-Shih-Tzu-with-mud-on-his-fur-sticks-tongue-out-.jpg",
-            "breed":"Shit Tzu",
-            "likes": 4
-        },
-        {
-            "id": 6,
-            "name": "Mia",
-            "image": "./images/mia.png",
-            "breed": "German Shepared mix",
-            "likes": 3
-        }
-    ]
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Molly",
+      "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F03%2F02%2Fborder-collie-green-field-268313239-2000.jpeg",
+      "breed": "Border Collie",
+      "likes": 6
+    },
+    {
+      "id": 2,
+      "name": "Bella",
+      "image": "https://media-be.chewy.com/wp-content/uploads/2021/04/01194949/chihuahua-laying-on-floor-1024x615.jpg",
+      "breed": "Chihuahua",
+      "likes": 5
+    },
+    {
+      "id": 3,
+      "name": "Chloe",
+      "image": "https://a-z-animals.com/media/animals/images/original/english_springer_spaniel.jpg",
+      "breed": "English Springer Spaniel",
+      "likes": 8
+    },
+    {
+      "id": 4,
+      "name": "Charlie",
+      "image": "https://cdn.rescuegroups.org/1023/pictures/animals/19246/19246111/93925306.jpg",
+      "breed": "Schnauzer mix",
+      "likes": 6
+    },
+    {
+      "id": 5,
+      "name": "Chip",
+      "image": "https://cdn-ghckb.nitrocdn.com/ywsRCaHzPZOrRGmIQthcAKzblzYFHUKW/assets/images/optimized/rev-ea82780/wp-content/uploads/2021/05/cute-Shih-Tzu-with-mud-on-his-fur-sticks-tongue-out-.jpg",
+      "breed": "Shit Tzu",
+      "likes": 4
+    },
+    {
+      "id": 6,
+      "name": "Mia",
+      "image": "./images/mia.png",
+      "breed": "German Shepared mix",
+      "likes": 5
+    }
+  ]
 }
