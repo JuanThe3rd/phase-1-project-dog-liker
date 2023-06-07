@@ -34,6 +34,13 @@
             "image": "https://cdn-ghckb.nitrocdn.com/ywsRCaHzPZOrRGmIQthcAKzblzYFHUKW/assets/images/optimized/rev-ea82780/wp-content/uploads/2021/05/cute-Shih-Tzu-with-mud-on-his-fur-sticks-tongue-out-.jpg",
             "breed":"Shit Tzu",
             "likes": 4
+        },
+        {
+            "id": 6,
+            "name": "Mia",
+            "image": "./images/mia.png",
+            "breed": "German Shepared mix",
+            "likes": 3
         }
     ]
 }
