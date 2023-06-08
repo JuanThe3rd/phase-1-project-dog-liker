@@ -32,7 +32,7 @@
 }
 
 #filter-container {
-    height: 20rem;
+    height: 10rem;
     width: 15rem;
     position: fixed;
     right: 1.4rem;
@@ -55,8 +55,12 @@
     border-top-right-radius: 9px;
 }
 
-#filter-form {
-    padding: 10px;
+.input{
+    margin-bottom: 10px;
+}
+
+#filter-form{
+    margin-left:10px;
 }
 
 .hidden {
