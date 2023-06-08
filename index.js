@@ -91,7 +91,68 @@ function incrementLikes(id) {
 // Filter Section
 const filterBtn = document.getElementById('filter-btn');
 const filterForm = document.getElementById('filter-container');
+const filterBreedForm = document.getElementById('breed-filter');
+const mostLikedBtn = document.getElementById('most-liked');
+const leastLikedBtn = document.getElementById('least-liked');
+let filteredDogs = [];
 
 filterBtn.addEventListener('click', () => {
     filterForm.classList.remove('hidden')
 });
+
+filterBreedForm.addEventListener('submit', filterByBreed);
+mostLikedBtn.addEventListener('click', filterByMostLiked);
+leastLikedBtn.addEventListener('click', filterByLeastLiked);
+
+function filterByBreed(event){
+    event.preventDefault();
+
+    dogList.forEach((dog) => {
+        if(dog.breed == event.target.userBreed.value){
+            filteredDogs.push(dog);
+        }
+    })
+
+    event.target.userBreed.value = '';
+    filterForm.classList.add('hidden');
+    dogCollection.innerHTML = '';
+    filteredDogs.forEach(renderDog);
+}
+
+function filterByMostLiked(event){
+    event.preventDefault();
+
+    dogList.forEach((dog) => {
+
+    })
+}
+
+function filterByLeastLiked(){
+    let leastLikedDog = dogList[0];
+    let destructiveDogList = dogList;
+    filteredDogs = [];
+
+    for(let i = 0; i < dogList.length; i++){
+        console.log(destructiveDogList);
+        leastLikedDog = findLeastLikedDog(destructiveDogList, leastLikedDog);
+        const index = destructiveDogList.indexOf(leastLikedDog);
+        filteredDogs.push(leastLikedDog);
+        destructiveDogList.splice(index,1);
+        console.log(destructiveDogList);
+    }
+
+    console.log(filteredDogs);
+    filterForm.classList.add('hidden')
+    dogCollection.innerHTML = '';
+    filteredDogs.forEach(renderDog);
+}
+
+function findLeastLikedDog(destructiveDogList, leastLikedDog){
+    destructiveDogList.forEach(dog => {
+        if (dog.likes < leastLikedDog.likes){
+            leastLikedDog = dog;
+        }
+    })
+    
+    return leastLikedDog;
+}

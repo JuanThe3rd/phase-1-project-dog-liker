@@ -28,12 +28,16 @@
             <div id="filter-header">
                 Filter Dogs!
             </div>
-            <form id="filter-form">
-                <input placeholder="Enter Dog Breed to Filter" name="filterByBreed"/>
-                <input value="Submit" type="submit"/>
-                <br />
-                <input type="submit" value="Filter by Most Liked"/>
-            </form>
+            <div id="filter-form">
+                <form id="breed-filter">
+                    <label>Dog Breed: </label>
+                    <br />
+                    <input name="userBreed" class="input" placeholder="Enter Dog Breed"/>
+                    <input value="Submit" type="submit"/>
+                </form>
+                <button id="most-liked" class="input">Filter by Most Liked</button>
+                <button id="least-liked" class="input">Filter by Least Liked</button>
+            </div>
         </div>
 
         <div id="dog-collection"></div>
