@@ -21,6 +21,14 @@
     bottom: 2rem;
 }
 
+#hide-btn {
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+    color: white;
+    font-size: xx-large;
+}
+
 #filter-border {
     height: 4rem;
     width: 4rem;

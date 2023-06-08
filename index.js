@@ -89,7 +89,8 @@ function incrementLikes(id) {
 }
 
 // Filter Section
-const filterBtn = document.getElementById('filter-btn');
+const filterBtn = document.getElementById('filter-border');
+const hideBtn = document.getElementById('hide-btn')
 const filterForm = document.getElementById('filter-container');
 const filterBreedForm = document.getElementById('breed-filter');
 const mostLikedBtn = document.getElementById('most-liked');
@@ -97,15 +98,24 @@ const leastLikedBtn = document.getElementById('least-liked');
 let filteredDogs = [];
 
 filterBtn.addEventListener('click', () => {
-    filterForm.classList.remove('hidden')
+    filterForm.classList.remove('hidden');
 });
 
+hideBtn.addEventListener('click', () => {
+    filterForm.classList.add('hidden');
+})
+
 filterBreedForm.addEventListener('submit', filterByBreed);
-mostLikedBtn.addEventListener('click', filterByMostLiked);
-leastLikedBtn.addEventListener('click', filterByLeastLiked);
+leastLikedBtn.addEventListener('click', () => {
+    filterByLikes(false);
+});
+mostLikedBtn.addEventListener('click', () => {
+    filterByLikes(true);
+});
 
 function filterByBreed(event){
     event.preventDefault();
+    filteredDogs = [];
 
     dogList.forEach((dog) => {
         if(dog.breed == event.target.userBreed.value){
@@ -119,40 +129,33 @@ function filterByBreed(event){
     filteredDogs.forEach(renderDog);
 }
 
-function filterByMostLiked(event){
-    event.preventDefault();
+function filterByLikes(flag){
+    let filteredDogLikes = [];
 
-    dogList.forEach((dog) => {
-
+    dogList.forEach(dog => {
+        filteredDogLikes.push(dog.likes);
     })
-}
 
-function filterByLeastLiked(){
-    let leastLikedDog = dogList[0];
-    let destructiveDogList = dogList;
-    filteredDogs = [];
-
-    for(let i = 0; i < dogList.length; i++){
-        console.log(destructiveDogList);
-        leastLikedDog = findLeastLikedDog(destructiveDogList, leastLikedDog);
-        const index = destructiveDogList.indexOf(leastLikedDog);
-        filteredDogs.push(leastLikedDog);
-        destructiveDogList.splice(index,1);
-        console.log(destructiveDogList);
+    filteredDogLikes.sort();
+    
+    if(flag){
+        filteredDogLikes.reverse();
     }
+    console.log(filteredDogLikes);
 
-    console.log(filteredDogs);
     filterForm.classList.add('hidden')
     dogCollection.innerHTML = '';
-    filteredDogs.forEach(renderDog);
-}
-
-function findLeastLikedDog(destructiveDogList, leastLikedDog){
-    destructiveDogList.forEach(dog => {
-        if (dog.likes < leastLikedDog.likes){
-            leastLikedDog = dog;
-        }
-    })
     
-    return leastLikedDog;
+    for(let i = 0; i < filteredDogLikes.length; i++){
+        const dogs = dogList.filter(dog => dog.likes === filteredDogLikes[i]);
+        
+        if(dogs.length > 1){
+            dogs.forEach(renderDog);
+            for(let j = 0; j < dogs.length-1; j++){
+                i++;
+            }
+        } else {
+            dogs.forEach(renderDog);
+        }
+    }
 }
