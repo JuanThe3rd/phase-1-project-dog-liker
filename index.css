@@ -1,11 +1,11 @@
 body {
     background-color:rgb(255, 245, 197);
-    font-family: helvetica;
 }
 
 #main-header {
     display: flex;
     justify-content: center;
+    font-family: Andale Mono, monospace;
 }
 
 #new-dog-form {
@@ -137,7 +137,7 @@ h2 {
     margin: 1rem 5rem;
     background-color: aliceblue;
     border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-family: Andale Mono, monospace;;
 }
 
 .dog-image {
@@ -145,4 +145,6 @@ h2 {
     height: 10rem;
     width: 15rem;
     margin-top: -2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
