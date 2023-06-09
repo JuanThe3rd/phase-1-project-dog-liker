@@ -1,3 +1,8 @@
+body {
+    background-color:rgb(255, 245, 197);
+    font-family: helvetica;
+}
+
 #main-header {
     display: flex;
     justify-content: center;
@@ -6,6 +11,24 @@
 #new-dog-form {
     text-align: center;
     padding : 1rem;
+}
+
+#top-input {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: black solid 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)
+}
+
+#middle-input {
+    border: black solid 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)
+}
+
+#bottom-input {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: black solid 2px;
 }
 
 .input-text {
@@ -19,14 +42,17 @@
     position: fixed;
     right: 2rem;
     bottom: 2rem;
+    color:white;
 }
 
 #hide-btn {
     position: absolute;
     right: 1rem;
-    top: -1rem;
+    top: 0.7rem;
     color: white;
     font-size: xx-large;
+    height: 0.5rem;
+    width: 1.5rem;
 }
 
 #filter-border {
@@ -37,6 +63,7 @@
     bottom: 1.6rem;
     border: black solid 2px;
     border-radius: 50%;
+    background-color: white;
 }
 
 #filter-container {
@@ -48,7 +75,7 @@
     border: black solid 1px;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 2px 2px 5px 2px rgba(96, 91, 91, 0.8);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07);
 }
 
 #filter-header {
@@ -61,6 +88,27 @@
     background-color: black;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+}
+
+p {
+    height: 1rem;
+    margin-top: -0.75rem;
+}
+
+h2 {
+    margin-top: -0.25rem;
+}
+
+.like-btn {
+    height: 2rem;
+    width: 30%;
+    border-radius: 10px;
+    border-width: 0.5px;
+    text-align: center;
+    margin: auto;
+    margin-top: -1rem;
+    line-height: 190%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .input{
@@ -81,16 +129,20 @@
 
 .dog-card {
     text-align: center;
-    border: grey solid 5px;
+    border: grey solid 1px;
     padding: 1rem;
     width: 15rem;
-    height: 25rem;
+    height: 21rem;
     display: inline-grid;
     margin: 1rem 5rem;
+    background-color: aliceblue;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .dog-image {
     justify-self: center;
     height: 10rem;
     width: 15rem;
+    margin-top: -2rem;
 }

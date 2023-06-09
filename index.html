@@ -12,11 +12,11 @@
         </div>
 
         <form id="new-dog-form">
-            <input class="input-text" placeholder="Enter a Dog's Name" name="name"/>
+            <input class="input-text" placeholder="Enter a Dog's Name" name="name" id="top-input"/>
             <br />
-            <input class="input-text" placeholder="Enter a Dog's Image URL" name="image"/>
+            <input class="input-text" placeholder="Enter a Dog's Image URL" name="image" id="middle-input"/>
             <br />
-            <input class="input-text" placeholder="Enter Dog Breed" name="breed"/>
+            <input class="input-text" placeholder="Enter Dog Breed" name="breed" id="bottom-input"/>
             <br />
             <input type="submit" value="ADD YOUR DOG!"/>
         </form>
@@ -26,7 +26,7 @@
         </div>
         <div id="filter-container" class="hidden">
             <div id="filter-header">Filter Dogs!</div>
-            <div id="hide-btn" title="hide">_</div>
+            <button id="hide-btn" title="hide"> </button>
             <div id="filter-form">
                 <form id="breed-filter">
                     <label>Dog Breed: </label>

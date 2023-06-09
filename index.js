@@ -31,9 +31,9 @@ function renderDog(dog){
     newDog.innerHTML = `
         <h2 class="dog-card-content">${dog.name}</h2>
         <img class ="dog-image" src="${dog.image}" alt="${dog.name}IMG">
-        <p class="dog-card-content">${dog.breed}</p>
+        <p class="dog-card-content">Breed: ${dog.breed}</p>
         <p class="dog-card-content">${dog.likes} Likes</p>
-        <button id="${likeButtonId}">Like ❤️</button>
+        <button title="Like" class="like-btn" id="${likeButtonId}">Like❤️</button>
     `;
     dogCollection.append(newDog);
 
@@ -141,8 +141,7 @@ function filterByLikes(flag){
     if(flag){
         filteredDogLikes.reverse();
     }
-    console.log(filteredDogLikes);
-
+    
     filterForm.classList.add('hidden')
     dogCollection.innerHTML = '';
     
