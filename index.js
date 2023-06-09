@@ -33,7 +33,7 @@ function renderDog(dog){
         <img class ="dog-image" src="${dog.image}" alt="${dog.name}IMG">
         <p class="dog-card-content">Breed: ${dog.breed}</p>
         <p class="dog-card-content">${dog.likes} Likes</p>
-        <button title="Like" class="like-btn" id="${likeButtonId}">Like 👍</button>
+        <button title="Like" class="like-btn btn" id="${likeButtonId}">Like 👍</button>
     `;
     dogCollection.append(newDog);
 
