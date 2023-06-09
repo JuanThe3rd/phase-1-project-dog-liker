@@ -1,16 +1,29 @@
 body {
     background-color:rgb(255, 245, 197);
+    font-family: Andale Mono, monospace;
+    background-color: rgba(255,245,197,1);
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, rgba(255,245,197,1) 10px ), repeating-linear-gradient( #1be41055, #1be410 );
 }
 
 #main-header {
     display: flex;
     justify-content: center;
-    font-family: Andale Mono, monospace;
+    border: black solid 1px;
+    border-radius: 25px;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
 }
 
 #new-dog-form {
     text-align: center;
     padding : 1rem;
+}
+
+.add-dog-btn {
+    margin-top: 1rem;
+    height: 2rem;
+    width: 10rem;
 }
 
 #top-input {
@@ -29,6 +42,7 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: black solid 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)
 }
 
 .input-text {
@@ -47,12 +61,18 @@ body {
 
 #hide-btn {
     position: absolute;
-    right: 1rem;
+    right: 0.5rem;
     top: 0.7rem;
     color: white;
     font-size: xx-large;
     height: 0.5rem;
     width: 1.5rem;
+    background-color: white;
+}
+
+#filter-input {
+    border-radius: 25px;
+    border-width: 0.5px;
 }
 
 #filter-border {
@@ -68,7 +88,7 @@ body {
 
 #filter-container {
     height: 10rem;
-    width: 15rem;
+    width: 16rem;
     position: fixed;
     right: 1.4rem;
     bottom: 1.6rem;
@@ -80,7 +100,7 @@ body {
 
 #filter-header {
     height: 2rem;
-    width: 15rem;
+    width: 16rem;
     text-align: center;
     font-size:x-large;
     justify-content: center;
@@ -92,7 +112,8 @@ body {
 
 p {
     height: 1rem;
-    margin-top: -0.75rem;
+    margin-bottom: 1rem;
+    padding-top: 0;
 }
 
 h2 {
@@ -106,13 +127,37 @@ h2 {
     border-width: 0.5px;
     text-align: center;
     margin: auto;
-    margin-top: -1rem;
+    margin-bottom: 0.7rem;
     line-height: 190%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .input{
     margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #1be410;
+    border-radius: 100px;
+    box-shadow: rgba(20, 247, 232, 0.2) 0 -25px 18px -14px inset,rgba(20, 247, 232, .15) 0 1px 2px,rgba(20, 247, 232, .15) 0 2px 4px,rgba(20, 247, 232, .15) 0 4px 8px,rgba(20, 247, 232, .15) 0 8px 16px,rgba(20, 247, 232, .15) 0 16px 32px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 5.25px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 12px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
 }
 
 #filter-form{
@@ -137,14 +182,13 @@ h2 {
     margin: 1rem 5rem;
     background-color: aliceblue;
     border-radius: 25px;
-    font-family: Andale Mono, monospace;;
 }
 
 .dog-image {
     justify-self: center;
     height: 10rem;
     width: 15rem;
-    margin-top: -2rem;
+    margin-top: 0;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
