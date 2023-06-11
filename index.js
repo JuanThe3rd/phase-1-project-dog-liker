@@ -136,7 +136,9 @@ function filterByLikes(flag){
         filteredDogLikes.push(dog.likes);
     })
 
-    filteredDogLikes.sort();
+    filteredDogLikes.sort(function(a,b) {
+        return a-b;
+    });
     
     if(flag){
         filteredDogLikes.reverse();
